@@ -1,5 +1,5 @@
 import useSWR from "swr";
-import { getTickets } from "../services/apiService";
+import { getTickets } from "../../services/apiService";
 import React, { useMemo } from "react";
 
 const fetcher = async (url) => {

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { createTicket, updateTicket } from "../services/apiService";
+import { createTicket, updateTicket } from "../../services/apiService";
 
 const TicketForm = ({ existingTicket, onTicketUpdated }) => {
   const [title, setTitle] = useState(existingTicket?.title || "");
