@@ -1,42 +1,129 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+  background-color: #EFF8FF;
+  color: #333;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+body, html {
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #EFF8FF;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+* {
+  box-sizing: border-box;
+  max-width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+
+.custom-navbar {
+  width: 100%;
+  background-color: aliceblue;
+  padding: 10px 20px;
+  font-size: 18px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
 }
 
-.card {
-  padding: 2em;
+.fixed-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures it stays above other elements */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a slight shadow */
 }
 
-.read-the-docs {
-  color: #888;
+/* Prevent content from being hidden behind the fixed navbar */
+body {
+  padding-top: 80px; /* Adjust based on navbar height */
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 22px;
+  color: #ffcc00 !important;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.nav-link-custom {
+  color: rgb(0, 0, 0) !important;
+  transition: all 0.3s ease-in-out;
+  font-weight: 500;
+}
+
+.nav-link-custom:hover {
+  color: #ffcc00 !important;
+  transform: scale(1.1);
+}
+
+
+.ms-auto {
+  display: flex;
+  gap: 50px;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  margin-right: 10px;
+}
+
+.booking-title {
+  font-family: "Inter", sans-serif;
+  font-size: 72px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.nice-form-group{
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.FormContainer{
+  padding: 10px 60px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.bracket {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 40px;
+  align-items: center;
+
+}
+.file-upload input[type="file"] {
+  padding: 10px;
+  border: 1px dashed #c0c4c9;
+  cursor: pointer;
+}
+
+.file-upload input[type="file"]:hover {
+  border-color: #3b4ce2;
+}
+
+.submit-button {
+  background-color: #010101;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s;
+  margin: 30px;
+}
+
+.submit-button:hover {
+  background-color: #EB0028;
 }
