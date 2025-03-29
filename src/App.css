@@ -37,13 +37,13 @@ body, html {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000; /* Ensures it stays above other elements */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a slight shadow */
+  z-index: 1000; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
 }
 
-/* Prevent content from being hidden behind the fixed navbar */
+
 body {
-  padding-top: 80px; /* Adjust based on navbar height */
+  padding-top: 80px; 
 }
 
 .navbar-brand {
@@ -126,4 +126,21 @@ body {
 
 .submit-button:hover {
   background-color: #EB0028;
+}
+
+.form-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+}
+
+.title {
+  width: 150px; 
+  text-align: left; 
+}
+
+.MainFormContainer{
+  align-content: center;
+  padding: 30px 60px;
 }
