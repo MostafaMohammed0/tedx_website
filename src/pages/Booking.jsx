@@ -31,6 +31,7 @@ function Booking() {
   };
 
   return (
+    <div className="BookingPage">
     <div className="FormContainer">
       <Navbar />
       <h1 className="booking-title">Book Your Ticket</h1>
@@ -43,8 +44,8 @@ function Booking() {
         handleChange={handleChange} 
         handleFileChange={handleFileChange} 
         handleSubmit={handleSubmit} 
-      />
-
+      />    
+    </div>
       <Footer />
     </div>
   );

@@ -1,11 +1,12 @@
 import React from "react";
+import "../App.css";
 
-function footer() {
+function Footer() {
   return (
-    <div>
-      
-    </div>
+    <footer className="footer">
+      <p>&copy; {new Date().getFullYear()} TEDx. All rights reserved.</p>
+    </footer>
   );
 }
 
-export default footer;
+export default Footer;

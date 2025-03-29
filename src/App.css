@@ -86,19 +86,36 @@ body {
 
 .nice-form-group{
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
   gap: 40px;
 }
 
+
+.BookingPage{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #EFF8FF;
+}
+
+
 .FormContainer{
+  display: flex;
+  flex-direction: column;
+  width: 70%;
   padding: 10px 60px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin: 80px auto;
 }
+
+
 .bracket {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 40px;
   align-items: center;
 
@@ -110,7 +127,7 @@ body {
 }
 
 .file-upload input[type="file"]:hover {
-  border-color: #3b4ce2;
+  border-color: #EB0028;
 }
 
 .submit-button {
@@ -130,9 +147,9 @@ body {
 
 .form-group {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 20px;
-  width: 100%;
+
 }
 
 .title {
@@ -143,4 +160,15 @@ body {
 .MainFormContainer{
   align-content: center;
   padding: 30px 60px;
+
+}
+
+.footer {
+  width: 1920px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  margin-top: auto;
 }
