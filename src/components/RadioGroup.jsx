@@ -1,9 +1,10 @@
 import React from "react";
+import "../App.css";
 
 function RadioGroup({ userType, setUserType }) {
   return (
-    <div className="mt-4">
-      <label>
+    <div className="radio-group">
+      <label className={`radio-option ${userType === "outside" ? "selected" : ""}`}>
         <input
           type="radio"
           value="outside"
@@ -12,7 +13,7 @@ function RadioGroup({ userType, setUserType }) {
         />
         Outside University
       </label>
-      <label className="ml-4">
+      <label className={`radio-option ${userType === "inside" ? "selected" : ""}`}>
         <input
           type="radio"
           value="inside"
