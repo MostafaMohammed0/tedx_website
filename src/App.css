@@ -1,3 +1,6 @@
+/* Import the Inter font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 #root {
   margin: 0 auto;
   text-align: center;
@@ -5,46 +8,51 @@
   color: #333;
 }
 
-
 body, html {
   overflow-x: hidden;
   width: 100%;
   margin: 0;
   padding: 0;
   background-color: #EFF8FF;
+  font-family: 'Inter', sans-serif; /* Apply Inter font globally */
 }
 
 * {
   box-sizing: border-box;
   max-width: 100%;
+  font-family: 'Inter', sans-serif; /* Ensure all elements use Inter font */
 }
 
 
+body {
+  padding-top: 80px; 
+}
+
 .custom-navbar {
   width: 100%;
-  background-color: aliceblue;
   padding: 10px 20px;
   font-size: 18px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
+  position: fixed;
+  top: 0;
+  z-index: 1000; 
 }
+
+
 
 .fixed-navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000; /* Ensures it stays above other elements */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a slight shadow */
+  z-index: 1000; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
 }
 
-/* Prevent content from being hidden behind the fixed navbar */
-body {
-  padding-top: 80px; /* Adjust based on navbar height */
-}
+
 
 .navbar-brand {
   font-weight: bold;
@@ -62,8 +70,7 @@ body {
 }
 
 .nav-link-custom:hover {
-  color: #ffcc00 !important;
-  transform: scale(1.1);
+  color: #EB0028 !important;
 }
 
 
@@ -86,32 +93,64 @@ body {
 
 .nice-form-group{
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
   gap: 40px;
 }
 
+
+.BookingPage{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #EFF8FF;
+}
+
+
 .FormContainer{
+  display: flex;
+  flex-direction: column;
+  width: 60%;
   padding: 10px 60px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 80px;
+  margin-top: 40px;
+  align-items: center;
 }
+
+
 .bracket {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  gap: 40px;
-  align-items: center;
-
-}
-.file-upload input[type="file"] {
-  padding: 10px;
-  border: 1px dashed #c0c4c9;
-  cursor: pointer;
+  flex-direction: row; /* Ensures label and input are side by side */
+  justify-content: flex-start; /* Aligns content to the left */
+  gap: 20px; /* Adds spacing between elements inside the bracket */
+  align-items: center; /* Vertically aligns items */
+  padding: 5px 0; /* Adds some padding for spacing */
+  width: 100%; /* Ensures the bracket spans the full width */
 }
 
-.file-upload input[type="file"]:hover {
-  border-color: #3b4ce2;
+.bracket input {
+  width: 100%; /* Makes the input take up available space */
+  padding: 10px; /* Adds padding inside the input */
+  font-size: 16px; /* Sets a readable font size */
+  border: 1px solid #ccc; /* Adds a border to the input */
+  border-radius: 4px; /* Rounds the corners of the input */
+  background-color: gray;
+  box-sizing: border-box; /* Ensures padding is included in the width */
 }
+
+.bracket input:focus {
+  outline: none; /* Removes the default outline on focus */
+  border-color: #EB0028; /* Changes the border color on focus */
+  box-shadow: 0 0 5px rgba(255, 204, 0, 0.5); /* Adds a subtle glow effect */
+}
+
+.bracket input::placeholder {
+  color: #aaa; /* Light gray placeholder text */
+  font-style: italic; /* Italicizes the placeholder text */
+}
+
 
 .submit-button {
   background-color: #010101;
@@ -121,9 +160,76 @@ body {
   cursor: pointer;
   border: none;
   transition: background 0.2s;
-  margin: 30px;
+  margin-top: 50px;
 }
 
 .submit-button:hover {
   background-color: #EB0028;
 }
+
+.form-group {
+  display: flex;
+  flex-direction: row; /* Ensures label and input are side by side */
+  align-items: center; /* Vertically aligns items */
+  gap: 20px; /* Adds consistent spacing between label and input */
+  width: 100%; /* Ensures the group spans the full width */
+}
+
+.title {
+  width: 200px; 
+  text-align: left;
+  white-space: nowrap; 
+}
+
+.MainFormContainer{
+  align-content: center;
+  padding: 30px 60px;
+  width: 75%;
+}
+
+.footer {
+  width: 1920px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  margin-top: auto;
+}
+
+.radio-group {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.radio-option input {
+  display: none; 
+}
+
+.radio-option.selected {
+  border-color: #EB0028;
+  background-color: #EFF8FF;
+  color: #333;
+}
+
+.radio-option:hover {
+  border-color: #EB0028;
+  background-color: #EFF8FF;
+}
+
