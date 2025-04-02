@@ -34,6 +34,7 @@ function Booking() {
     <div className="BookingPage">
     <div className="FormContainer">
       <Navbar />
+      
       <h1 className="booking-title">Book Your Ticket</h1>
       
       <RadioGroup userType={userType} setUserType={setUserType} />

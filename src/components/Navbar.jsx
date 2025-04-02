@@ -6,8 +6,8 @@ import "../App.css";
 
 function CustomNavbar() {
   return (
-    <Navbar bg="white" variant="dark" expand="lg" className="fixed-navbar" >
-      <Container className="custom-navbar method-1  ">
+    <Navbar  variant="dark" expand="lg" className="fixed-navbar" >
+      <Container className="custom-navbar">
         <Navbar.Brand href="/" className="navbar-brand">
           <img
             src="src\assets\logo-black.png"
